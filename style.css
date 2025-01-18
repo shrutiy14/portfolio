@@ -134,7 +134,7 @@ h2 {
 }
 
 /* Styling for the sections in the Resume */
-.resume section {
+section {
     margin-bottom: 3rem; 
     padding: 1.5rem; 
     border: 1px solid #ddd; 
@@ -142,19 +142,19 @@ h2 {
     background-color: #fff; 
 }
 
-.resume section header h2 {
+section header h2 {
     font-size: 1.75rem;
     color: #333;
     margin-bottom: 0.5rem;
 }
 
-.resume section p {
+section p {
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
     color: #555;
 }
 
-.resume section ul {
+section ul {
     list-style-type: none;
     padding: 0;
 }
@@ -164,17 +164,17 @@ section ul li {
     color: #555;
 }
 
-.resume h3 {
+h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.resume h3,
+h3,
 time {
     color: #333;
 }
 
-.resume time {
+time {
     font-style: italic;
     color: #777;
 }
