@@ -15,13 +15,13 @@ nav li {
 
  
 :root {
-    --color-accent: oklch(65% 50% 0); 
+    --color-accent: oklch(65% 60% 0); 
   }
   
 
-  html {
+html {
     accent-color: var(--color-accent);  
-  }
+    }
 
 
 nav a {
