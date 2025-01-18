@@ -55,38 +55,36 @@ nav a:hover {
   }
 
 
-form {
+  form {
     display: grid;  
-    grid-template-columns: auto 1fr; /* Define two columns: one for labels and one for inputs */
-    gap: 1em;  /* Adds spacing between form controls */
+    grid-template-columns: auto 1fr; 
+    gap: 1em;  
 }
 
 form label {
-    display: grid;  /* Make labels grid containers */
-    grid-template-columns: subgrid;  /* Use subgrid to inherit the form's grid */
-    grid-column: 1 / -1;  /* Make the label span the entire row */
-    margin-bottom: 0.5em
+    display: grid; 
+    grid-template-columns: subgrid;  
+    grid-column: 1 / -1;  
 }
 
 form input, form textarea, form button {
     display: block;
-    width: 100%;  /* Make inputs and buttons fill their column */
+    width: 100%; 
     box-sizing: border-box;
     border: 1px solid #ccc;  
 }
 
 form input, form textarea {
     padding: 0.5em;     
-    margin-bottom: 0.5em; 
+    margin-bottom: 1em; 
 }
 
 form button {
     padding: 0.7em 1.5em;  
-    margin-top: 0.5em;       
+    margin-top: 1em;       
     background-color: #ccc; 
     border: 1px solid #ccc;   
 }
-
 
   
   
