@@ -82,7 +82,14 @@ label {
 input, textarea, button {
     width: 100%;                
 }
-  
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1.5em;
+    margin: 2em;
+}
+
 
   
   
