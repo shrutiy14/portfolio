@@ -128,6 +128,77 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
 
+/* Main heading */
+.resume h1 {
+    font-size: 3rem; /* Large heading for the resume title */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Section header styling */
+.resume header h2 {
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Section styling */
+.resume section {
+    margin-bottom: 3rem; /* Add space between sections */
+}
+
+.resume section article {
+    margin-left: 1rem; 
+    margin-right: 1rem;
+}
+
+/* Article styling */
+.resume article h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.resume article p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.resume article time {
+    display: block;
+    font-style: italic;
+    color: #555;
+}
+
+/* List styling */
+.resume ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Section padding and margins */
+.resume section {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some spacing and structure */
+.resume section, article {
+    margin-top: 1rem;
+}
+
+
 
 
   
