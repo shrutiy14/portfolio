@@ -1,4 +1,5 @@
 body {
+    font-family: 'Arial', sans-serif; 
     max-width: 100ch;  
     margin-inline: auto;  
     padding: 0 1rem; 
