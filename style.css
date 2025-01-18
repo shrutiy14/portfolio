@@ -54,47 +54,30 @@ nav a:hover {
     padding-bottom: 0.2em;  
   }
 
-/* Step 1: Apply Grid Layout to the form */
-form {
-    display: grid;                       /* Enable grid layout */
-    grid-template-columns: auto 1fr;      /* Two columns: auto width for labels, flexible for inputs */
-    gap: 1em;                            /* Adds spacing between rows and columns */
+
+
+
+input, textarea, button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;  
   }
   
-  /* Step 2: Labels */
-  label {
-    display: grid;                       /* Make labels grid containers */
-    grid-template-columns: subgrid;      /* Subgrid for labels to align with the form grid */
-    margin-block: 1em;                   /* Adds space before and after labels */
-    grid-column: 1 / -1;                 /* Make labels span the full width (both columns) */
+
+
+input, textarea {
+    padding: 0.5em;     
+    margin-bottom: 1em; 
   }
   
-  /* Step 3: Form controls (input, textarea, button) */
-  input, textarea, button {
-    width: 100%;                         /* Ensure the form controls take up the whole column */
-    padding: 0.5em;                      /* Add padding inside the input/textarea fields */
-    margin-bottom: 1em;                  /* Adds space between form fields */
-    border: 1px solid #ccc;              /* Light gray border */
-    border-radius: 4px;                  /* Rounded corners */
-  }
-  
-  /* Step 4: Submit button */
+
   button {
-    grid-column: 1 / -1;                 /* Make button span the entire row */
-    padding: 0.7em 1.5em;                /* Add padding to the button */
-    background-color: #ccc;              /* Set background color to gray */
-    color: white;                        /* Set text color to white */
-    border: 1px solid #ccc;              /* Add border to button */
-    border-radius: 4px;                  /* Rounded corners */
-    cursor: pointer;                     /* Pointer cursor on hover */
+    padding: 0.7em 1.5em;  
+    margin-top: 1em;       
+    background-color: #ccc; 
+    border: 1px solid #ccc;   
   }
-  
-  /* Optional: Darker gray on button hover */
-  button:hover {
-    background-color: #aaa;              /* Darker gray when hovered */
-  }
-  
-  
   
   
   
