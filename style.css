@@ -159,7 +159,7 @@ h2 {
     padding: 0;
 }
 
-.resume section ul li {
+section ul li {
     font-size: 1.125rem;
     color: #555;
 }
@@ -178,10 +178,6 @@ time {
     font-style: italic;
     color: #777;
 }
-
-
-
-
 
 
 
