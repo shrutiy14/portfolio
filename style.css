@@ -13,22 +13,29 @@ nav li {
   }
 
 
-nav {
-    display: flex;  
+/* General styling for navigation links */
+nav a {
+    flex: 1;
+    text-decoration: none;           /* Removes the underline from links */
+    color: inherit;                  /* Makes the link color inherit from the parent */
+    text-align: center;              /* Centers the text within each link */
+    padding: 0.5em;                  /* Adds padding for spacing */
+    margin-bottom: 1em;              /* Adds spacing below the navigation */
   }
   
-
-nav a {
-    flex: 1;  
-    text-align: center; 
-    padding: 1rem;  
-    text-decoration: none;  
+  /* Styling for the navigation container */
+  nav {
+    display: flex;                  
+    margin-bottom: 1rem;       
+    border-bottom: 1px solid hsl(0 0% 80%);  
   }
-
-
-nav a.current {
+  
+  /* Styling for the current page link */
+  nav a.current {
     font-weight: bold;  
     color: #0073e6;  
+    border-bottom: 0.4em solid hsl(0 0% 60%);  /* Adds a thick bottom border for the current page */
+    padding-bottom: 0.2em;             /* Adjusts padding to counteract the increase in height */
   }
 
 
