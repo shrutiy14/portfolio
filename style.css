@@ -56,30 +56,26 @@ nav a:hover {
 
 
 
-/* Apply the same border styles to button as the message textarea and input fields */
+
 input, textarea, button {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #ccc;  /* Light gray border for consistency */
-    border-radius: 4px;      /* Rounded corners */
+    border: 1px solid #ccc;  
   }
   
-  /* Padding and margin for text inputs, text areas, and buttons */
+
   input, textarea {
-    padding: 0.5em;      /* Adds padding inside the input/textarea fields */
-    margin-bottom: 1em;  /* Adds space between form fields */
+    padding: 0.5em;     
+    margin-bottom: 1em;  
   }
   
-  /* Style for the submit button */
+
   button {
-    padding: 0.7em 1.5em;  /* Adds padding to make the button larger */
-    margin-top: 1em;       /* Adds space above the button */
-    background-color: #ccc; /* Light gray background */
-    color: white;          /* White text color */
-    border: 1px solid #ccc;  /* Same border as input and textarea */
-    border-radius: 4px;    /* Rounded corners */
-    cursor: pointer;       /* Pointer cursor on hover */
+    padding: 0.7em 1.5em;  
+    margin-top: 1em;       
+    background-color: #ccc; 
+    border: 1px solid #ccc;  
   }
   
   
