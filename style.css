@@ -135,7 +135,11 @@ h2 {
 
 /* Styling for the sections in the Resume */
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; 
+    padding: 1.5rem; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #fff; 
 }
 
 section header h2 {
