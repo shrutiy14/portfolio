@@ -65,6 +65,7 @@ form label {
     display: grid;  /* Make labels grid containers */
     grid-template-columns: subgrid;  /* Use subgrid to inherit the form's grid */
     grid-column: 1 / -1;  /* Make the label span the entire row */
+    margin-bottom: 0.5em
 }
 
 form input, form textarea, form button {
@@ -76,12 +77,12 @@ form input, form textarea, form button {
 
 form input, form textarea {
     padding: 0.5em;     
-    margin-bottom: 1em; 
+    margin-bottom: 0.5em; 
 }
 
 form button {
     padding: 0.7em 1.5em;  
-    margin-top: 1em;       
+    margin-top: 0.5em;       
     background-color: #ccc; 
     border: 1px solid #ccc;   
 }
