@@ -61,4 +61,28 @@ input, textarea, button {
   
 
 
+label, input, textarea, button {
+    display: block; 
+    width: 100%;      
+    box-sizing: border-box;  
+  }
+  
+ 
+  label {
+    margin-block: 1em; 
+  }
+  
+
+  input, textarea {
+    padding: 0.5em;      
+    margin-bottom: 1em; 
+  }
+  
+
+  button {
+    padding: 0.7em 1.5em;  
+    border: none;         
+    border-radius: 4px;    
+    margin-top: 1em;      
+  }
   
