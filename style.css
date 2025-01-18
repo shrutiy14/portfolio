@@ -55,6 +55,11 @@ nav a:hover {
   }
 
 
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;     
+    gap: 1em;    
+}
 
 
 input, textarea, button {
@@ -64,8 +69,14 @@ input, textarea, button {
     border: 1px solid #ccc;  
   }
   
+label {
+    display: grid;                     
+    grid-template-columns: subgrid;     
+    grid-column: 1 / -1;              
+    margin-block: 1em;                  
+  }
 
-  input, textarea {
+input, textarea {
     padding: 0.5em;     
     margin-bottom: 1em;  
   }
@@ -76,6 +87,7 @@ input, textarea, button {
     margin-top: 1em;       
     background-color: #ccc; 
     border: 1px solid #ccc;  
+    grid-column: 1 / -1;    
   }
   
   
