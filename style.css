@@ -55,4 +55,10 @@ nav a:hover {
   }
 
 
+input, textarea, button {
+    font: inherit;  
+  }
+  
+
+
   
