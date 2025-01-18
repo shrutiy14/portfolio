@@ -54,37 +54,35 @@ nav a:hover {
     padding-bottom: 0.2em;  
   }
 
+  
 input, textarea, button {
-    display: block;
-    font: inherit;  
-    width: 100%;  
-    margin-block: 0.5em;
-    padding: 0.75em;
-    /*margin-bottom: 1em;  *//* Adds space below each input/textarea/button */
+    font: inherit; 
 }
 
-
-form {
-    display: grid;             
-    grid-template-columns: auto 1fr;                  
-    gap: 1em;  /* Ensures consistent space between all form fields */
-}
 
 label {
-    grid-column: 1 / -1;         
-    display: grid;    
-    font-weight: bold; 
-    grid-template-columns: subgrid; 
+    margin-block: 0.5em; 
 }
 
-
-button {
-    font-weight: bold;
-}
 
 form {
-    gap: 1em;   
+    display: grid;        
+    grid-template-columns: auto 1fr; 
+    gap: 1em;     
 }
+
+
+label {
+    grid-column: 1 / -1;      
+    display: grid;        
+    grid-template-columns: subgrid;
+}
+
+
+input, textarea, button {
+    width: 100%;                
+}
+  
 
   
   
