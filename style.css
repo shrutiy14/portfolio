@@ -54,36 +54,42 @@ nav a:hover {
     padding-bottom: 0.2em;  
   }
 
+
+  /* Reset for form controls */
 input, textarea, button {
-    font: inherit; 
+    font: inherit;  /* Inherit the font from the body */
 }
 
+/* Block-level display for form elements */
 label, input, textarea, button {
-    display: block; 
-    width: 100%; 
-    box-sizing: border-box; 
-  }
-  
+    display: block; /* Make form controls behave like block elements */
+    width: 100%;    /* Ensure full width of form elements */
+    box-sizing: border-box;  /* Include padding and borders in width calculation */
+}
+
+/* Margin adjustments for labels */
 label {
-    margin-block: 0.5em; 
-  }
-  
+    margin-block: 0.5em;  /* Add space above and below labels */
+}
+
+/* Step 3.3: Grid layout for the form */
 form {
-    display: grid;          
-    grid-template-columns: auto 1fr; 
-    gap: 1em;                     
-  }
-  
+    display: grid;                /* Enable grid layout */
+    grid-template-columns: auto 1fr; /* Labels in the first column, inputs in the second */
+    gap: 1em;                      /* Add space between form controls */
+}
+
+/* Labels should span both columns */
 label {
-    display: grid;         
-    grid-template-columns: subgrid; 
-    grid-column: 1 / -1;         
-  }
-  
+    grid-column: 1 / -1;          /* Make labels span both columns */
+    display: grid;                /* Turn labels into grid containers */
+    grid-template-columns: subgrid; /* Inherit the grid from the parent form */
+}
+
+/* Ensure form controls (inputs, textareas, and buttons) fill available space */
 input, textarea, button {
-    width: 100%;                  
-  }
-  
+    width: 100%;                  /* Make inputs and buttons take the full width */
+}
   
   
   
