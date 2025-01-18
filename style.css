@@ -57,33 +57,25 @@ nav a:hover {
 
 input, textarea, button {
     font: inherit;  
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;  
+    border-radius: 4px;   
   }
   
-
-
-
-label, input, textarea, button {
-    display: block;  
-    width: 100%;   
-    box-sizing: border-box; 
-  }
-  
-
-label {
-    margin-block: 1em;  
-  }
-  
-
 input, textarea {
-    padding: 0.5em;  
-    margin-bottom: 1em;  
+    padding: 0.5em;      
+    margin-bottom: 1em; 
   }
   
 button {
-    padding: 0.7em 1.5em;  
-    border: none;       
-    border-radius: 4px;    
-    margin-top: 1em;      
+    padding: 0.7em 1.5em; 
+    margin-top: 1em;     
+    background-color: var(--color-accent);  
+    color: white;    
+    border: 1px solid #ccc; 
   }
+  
   
   
