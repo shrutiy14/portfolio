@@ -117,6 +117,18 @@ input, textarea, button {
 }
 
 
+h1 {
+    font-size: 4em; 
+    line-height: 1.1; 
+    text-wrap: balance; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+
 
   
   
