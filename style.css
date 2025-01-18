@@ -4,3 +4,27 @@ body {
     padding: 0 1rem; 
   }
   
+nav ul {
+    display: contents;  
+  }
+  
+nav li {
+    display: contents;  
+  }
+
+
+nav {
+    display: flex;  
+  }
+  
+
+nav a {
+    flex: 1;  
+    text-align: center; 
+    padding: 1rem;  
+    text-decoration: none;  
+  }
+  
+
+
+  
