@@ -133,61 +133,50 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-/* Resume section cards */
+/* Styling for the sections in the Resume */
 section {
-    background-color: #ffffff; /* White background for the card */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 2em; /* Spacing inside the card */
-    margin: 1.5em auto; /* Add spacing between cards */
-    max-width: 800px; /* Center and constrain width */
+    margin-bottom: 2rem;
 }
 
-/* Section headers */
 section header h2 {
-    font-size: 1.75rem; /* Distinct size for section headers */
-    margin-bottom: 0.5em; /* Space below the header */
-    color: #000000; /* Accent color */
-    border-bottom: 2px solid rgba(0, 123, 255, 0.2); /* Subtle bottom border */
-    padding-bottom: 0.25em; /* Space below the border */
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-/* Subsection headers (h3 inside article) */
-section article header h3 {
-    font-size: 1.5rem; /* Adjust font size for subsections */
-    margin-bottom: 0.5em;
-    color: #444;
-}
-
-/* Paragraphs in sections */
 section p {
-    margin: 0.5em 0; /* Add vertical spacing */
-    color: #555; /* Subtle text color */
-    line-height: 1.6;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #555;
 }
 
-/* Lists */
 section ul {
-    list-style-type: disc;
-    padding-left: 1.5em;
-    margin: 0.5em 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 section ul li {
-    margin-bottom: 0.5em; /* Space between list items */
+    font-size: 1.125rem;
+    color: #555;
 }
 
-/* Links in sections */
-section a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-section a:hover {
-    color: #0056b3;
+h3,
+time {
+    color: #333;
 }
+
+time {
+    font-style: italic;
+    color: #777;
+}
+
+
+
 
 
 
