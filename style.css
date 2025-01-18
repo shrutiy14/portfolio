@@ -13,6 +13,15 @@ nav li {
     display: contents;  
   }
 
+ 
+:root {
+    --color-accent: oklch(65% 50% 0); 
+  }
+  
+
+  html {
+    accent-color: var(--color-accent);  
+  }
 
 
 nav a {
@@ -37,6 +46,12 @@ nav {
     color: #0073e6;  
     border-bottom: 0.4em solid hsl(0 0% 60%);  
     padding-bottom: 0.2em;           
+  }
+
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);  
+    padding-bottom: 0.2em;  
   }
 
 
