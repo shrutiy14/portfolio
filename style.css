@@ -90,6 +90,31 @@ input, textarea, button {
     margin: 2em;
 }
 
+.projects article {
+    display: grid;         
+    grid-template-rows: subgrid; 
+    grid-row: span 3;      
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.projects article h2 {
+    margin: 0; 
+}
+
+.projects article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.projects article p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
 
   
   
