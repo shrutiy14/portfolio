@@ -80,8 +80,7 @@ label, input, textarea, button {
   
 
   button {
-    padding: 0.7em 1.5em;  
-    border: none;         
+    padding: 0.7em 1.5em;        
     border-radius: 4px;    
     margin-top: 1em;      
   }
