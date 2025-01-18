@@ -60,13 +60,6 @@ input, textarea, button {
     font: inherit;  /* Inherit the font from the body */
 }
 
-/* Block-level display for form elements */
-label, input, textarea, button {
-    display: block; /* Make form controls behave like block elements */
-    width: 100%;    /* Ensure full width of form elements */
-    box-sizing: border-box;  /* Include padding and borders in width calculation */
-}
-
 /* Margin adjustments for labels */
 label {
     margin-block: 0.5em;  /* Add space above and below labels */
