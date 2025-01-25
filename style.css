@@ -25,14 +25,14 @@ nav li {
   
 /* Position the switcher in the top-right corner */
 .color-scheme {
-    position: absolute; /* Take it out of the normal document flow */
-    top: 1rem; /* Distance from the top edge */
-    right: 1rem; /* Distance from the right edge */
-    font-size: 80%; /* Make it less prominent */
-    font-family: inherit; /* Use the same font as the parent */
+    position: absolute; 
+    top: 1rem; 
+    right: 1rem; 
+    font-size: 80%; 
+    font-family: inherit; 
     display: flex;
-    align-items: center; /* Align label text and dropdown */
-    gap: 0.5rem; /* Add space between the label and dropdown */
+    align-items: center; 
+    gap: 0.5rem;
   }
 
 html {
