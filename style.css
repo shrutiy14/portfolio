@@ -5,24 +5,53 @@ body {
     padding: 0 1rem; 
   }
   
-nav ul {
+/*nav ul {
     display: contents;  
   }
   
 nav li {
     display: contents;  
-  }
+  }*/
 
  
 :root {
+    /*--color-accent: oklch(65% 60% 0); */
+    /*color-scheme: light dark;*/
     --color-accent: oklch(65% 60% 0); 
+    --border-color: oklch(50% 10% 200 / 40%); 
+    --hover-bg: color-mix(in oklch, var(--color-accent), canvas 85%); 
+    color-scheme: light dark; 
   }
   
+/* Position the switcher in the top-right corner */
+.color-scheme {
+    position: absolute; /* Take it out of the normal document flow */
+    top: 1rem; /* Distance from the top edge */
+    right: 1rem; /* Distance from the right edge */
+    font-size: 80%; /* Make it less prominent */
+    font-family: inherit; /* Use the same font as the parent */
+    display: flex;
+    align-items: center; /* Align label text and dropdown */
+    gap: 0.5rem; /* Add space between the label and dropdown */
+  }
 
 html {
     accent-color: var(--color-accent);  
     }
 
+body {
+
+    color: canvastext;
+    background-color: canvas;
+}
+
+
+
+nav {
+    display: flex;                  
+    margin-bottom: 1rem;       
+    border-bottom: 1px solid var(--border-color); 
+  }
 
 nav a {
     flex: 1;
@@ -31,14 +60,7 @@ nav a {
     text-align: center;              
     padding: 0.5em;             
     margin-bottom: 1em;              
-  }
-
-
-nav {
-    display: flex;                  
-    margin-bottom: 1rem;       
-    border-bottom: 1px solid hsl(0 0% 80%);  
-  }
+}
   
  
  nav a.current {
@@ -51,12 +73,15 @@ nav {
 
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);  
-    padding-bottom: 0.2em;  
+    padding-bottom: 0.2em;
+    background-color: var(--hover-bg);  
   }
 
+
   
-input, textarea, button {
+input, textarea, button, select {
     font: inherit; 
+    width: 100%
 }
 
 
