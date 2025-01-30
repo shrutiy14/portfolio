@@ -110,10 +110,11 @@ export async function fetchJSON(url) {
 
 window.onload = async () => {
   // Fetch the project data
-  const projects = await fetchJSON('.../lib/projects.json');
+  const projects = await fetchJSON('projects/lib/projects.json');
 
   // Log the projects data to the console
   console.log(projects); // This will display the data in the browser console
 };
+
 
 
