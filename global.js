@@ -100,16 +100,20 @@ export async function fetchJSON(url) {
           throw new Error(`Failed to fetch projects: ${response.statusText}`);
       }
 
-      // Parse and return the data
+      // Parse the JSON data
       const data = await response.json();
       return data;
-      
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
 }
 
-// Example usage: Fetch data from the URL ../lib/projects.json
-const projectsData = await fetchJSON('../lib/projects.json');
-console.log(projectsData);  // Check the loaded data
+window.onload = async () => {
+  // Fetch the project data
+  const projects = await fetchJSON('../lib/projects.json');
+
+  // Log the projects data to the console
+  console.log(projects); // This will display the data in the browser console
+};
+
 
