@@ -92,29 +92,16 @@ if ("colorScheme" in localStorage) {
 
 export async function fetchJSON(url) {
   try {
-      // Fetch the JSON file from the given URL
-      const response = await fetch(url);
+      const response = await fetch('../lib/projects.json');
 
-      // Check if the response is successful
       if (!response.ok) {
           throw new Error(`Failed to fetch projects: ${response.statusText}`);
       }
-
-      // Parse the JSON data
       const data = await response.json();
       return data;
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
 }
-
-window.onload = async () => {
-  // Fetch the project data
-  const projects = await fetchJSON('projects/lib/projects.json');
-
-  // Log the projects data to the console
-  console.log(projects); // This will display the data in the browser console
-};
-
 
 
