@@ -27,9 +27,15 @@
         <!-- Dynamically added content will appear here -->
     </div>
 
-    <h3>Profile Stats</h3>
-    <div class="profile-stats">
+    <div id="profile-stats">
+        <h3>Profile Stats</h3>
         <!-- The data will be dynamically injected into this section -->
+        <dl class="profile-grid">
+            <dt>Public Repos:</dt><dd id="public-repos">Loading...</dd>
+            <dt>Public Gists:</dt><dd id="public-gists">Loading...</dd>
+            <dt>Followers:</dt><dd id="followers">Loading...</dd>
+            <dt>Following:</dt><dd id="following">Loading...</dd>
+        </dl>
     </div>
 
     <script src="global.js" type="module"></script>
