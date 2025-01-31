@@ -205,6 +205,48 @@ time {
 }
 
 
+/* Profile stats dropdown styles */
+#profile-stats {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#profile-stats h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for the profile stats */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.profile-grid dt {
+    font-weight: bold;
+    text-align: right;
+}
+
+.profile-grid dd {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Style for dropdown (could toggle visibility with JavaScript) */
+#profile-stats {
+    display: none;
+}
+
+/* To make it visible when needed (you can toggle this with JS) */
+#profile-stats.show {
+    display: block;
+}
+
+
 
 
   
