@@ -92,7 +92,7 @@ if ("colorScheme" in localStorage) {
 
 export async function fetchJSON(url) {
   try {
-      const response = await fetch('../lib/projects.json');
+      const response = await fetch(url);
 
       if (!response.ok) {
           throw new Error(`Failed to fetch projects: ${response.statusText}`);
@@ -103,5 +103,32 @@ export async function fetchJSON(url) {
       console.error('Error fetching or parsing JSON data:', error);
   }
 }
+
+export function renderProjects(project, containerElement) {
+  // Clear the existing content of the container element
+  containerElement.innerHTML = '';
+
+  // Loop through each project to create an article element for each
+  for (let project of projects) {
+      // Create a new <article> element to hold the project's details
+      const article = document.createElement('article');
+
+      // Create the dynamic heading element based on headingLevel
+      const heading = document.createElement(headingLevel);
+      heading.textContent = project.title;
+
+      // Populate the article with dynamic content
+      article.innerHTML = `
+          ${heading.outerHTML}  <!-- Add the dynamic heading -->
+          <img src="${project.image}" alt="${project.title}">
+          <p>${project.description}</p>
+      `;
+
+      // Append the article to the container element
+      containerElement.appendChild(article);
+  }
+}
+
+
 
 
