@@ -104,7 +104,7 @@ export async function fetchJSON(url) {
   }
 }
 
-export function renderProjects(projects, containerElement) {
+export function renderProjects(projects, containerElement, headingLevel ='h2') {
   // Clear the existing content of the container element
   containerElement.innerHTML = '';
 
