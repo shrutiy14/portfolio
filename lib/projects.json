@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi natus sint ipsum ipsa recusandae, maiores ex in blanditiis praesentium optio suscipit dolor esse reprehenderit a itaque soluta ratione est. Dolores."
+        "title": "SMASH Hackathon",
+        "year": 2025,
+        "image": "https://indico.cern.ch/event/1489401/logo-3797433634.png",
+        "description": "Utilized the provided LIGO O3 datasets to train models, focusing on detecting unusual patterns in the strain data without relying on pre-defined templates."
     },
     {
-        "title": "Officia eum exercitationem nulla!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dignissimos dolor alias nisi quas rem blanditiis illum quia autem ipsa facilis ratione veniam, maxime officia labore tempore ipsam inventore commodi molestiae ut quae aspernatur porro sit id. A, dolor!"
+        "title": "Spotify Lyrical Landscapes: Mapping Emotional Themes to Music Popularity (2000-2023)",
+        "year": 2024,
+        "image": "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+        "description": "Developed a thematic analysis pipeline to categorize lyrical content based on keyword-based themes and TF-IDF for feature extraction, and presented the findings with visualizations like heatmaps and radar plots to highlight the relationship between lyrical themes and song popularity."
     },
     {
-        "title": "Ratione ipsam perferendis voluptatem.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Laborum tempore ut deleniti accusantium aperiam ratione, repellendus quos accusamus distinctio eos sunt sapiente et porro incidunt minus consectetur voluptatibus. Molestias debitis temporibus quis, quisquam eum placeat rerum? Illum, minima!"
+        "title": "Predicting Vermont Business Ratings & Recommending Local Favorites with XGBoost and SVD",
+        "year": 2024,
+        "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/glossary/data-science/recommendation-system/img-1.png",
+        "description": "Built a personalized recommendation system leveraging user-business interactions, location data, and predicted ratings to suggest new businesses based on preferences and proximity."
     },
     {
-        "title": "Alias voluptatem iusto consequuntur.",
+        "title": "Recipe Calorie Prediction Using Lasso Regression and Feature Engineering",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Inventore, placeat obcaecati! Repudiandae provident fugit, itaque ipsa ut, harum sint ea dicta maiores odit numquam facilis molestias, inventore amet? Optio, ut. Exercitationem veniam mollitia corrupti, consectetur nemo quaerat ea."
+        "description": "Developed and tuned a Lasso Regression model (utilizing Scikit-learn pipelines and transformers) for predicting calories of a recipe utilizing feature engineering, achieving a significant improvement in RMSE from 588.5 (linear regression baseline model) to 37.7."
     },
     {
-        "title": "Deleniti quasi voluptatum aut.",
+        "title": "Accenture Federal Services: Harnessing AI for the IRS",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Natus iure, ipsa asperiores, pariatur dolore dolores consectetur corporis eos explicabo non neque et tempora temporibus libero nam! Quisquam, sit inventore nesciunt tempora fuga quasi neque repellendus rerum similique eligendi."
+        "description": "Enhanced fraud detection for ERC claims, and implemented an AI-chatbot for taxpayer assistance."
     },
     {
-        "title": "Et omnis cumque odit!",
+        "title": "Girls Who Code: Interactive Avatar",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Excepturi nulla quisquam et ex officia. Tenetur quis molestias necessitatibus aspernatur, aliquam dolore, numquam distinctio dignissimos repellendus, aperiam quae accusamus? Maiores eius non tenetur error, ullam eligendi eaque aliquam facilis?"
+        "description": "Created interactive avatar using p5.js"
     },
     {
-        "title": "Pariatur cupiditate recusandae eligendi?",
+        "title": "LLM for Automating i2o Retail Business Reports",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Officia pariatur dolores recusandae obcaecati nobis debitis quis accusantium, error vitae veritatis quam esse sapiente placeat, ducimus qui nihil, ea quaerat reiciendis suscipit! Autem expedita, aut suscipit enim veniam molestias."
+        "description": "Built LLM models with Hugging Face, OpenAI API, and LangChain to summarize multi-tabbed business reports, streamlining key insights across sales/marketing metrics for clients and reducing manual analysis time."
     },
     {
-        "title": "Alias dicta deleniti placeat.",
+        "title": "NourishNet: AI-Powered Personalized Nutrition Recommendations",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Odio, quod optio alias soluta pariatur quis accusantium provident debitis, facilis, nostrum ab blanditiis ipsa ipsam sapiente incidunt porro vitae praesentium cumque repellat atque architecto. Velit molestias ad eius ut!"
+        "description": "Created a recommendation system that suggests personalized meal plans based on user preferences, dietary restrictions, and nutrient needs, leveraging NLP on recipe datasets."
     },
     {
-        "title": "Maxime quo doloremque expedita.",
+        "title": "CrimeMap: Hotspot Prediction for Urban Crime Prevention",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorum quae minima nisi tenetur vel aliquam odio rem perferendis debitis! Veniam corrupti, veritatis quisquam cumque saepe accusamus quo? Nemo, nisi explicabo minima facere vero fugiat ipsam aperiam. Incidunt, impedit."
+        "description": "Built a geospatial crime prediction model that identifies high-risk areas using historical crime reports, socio-economic factors, and real-time incident updates."
     },
     {
-        "title": "Veniam veritatis magnam perspiciatis!",
+        "title": "ShopSense: Dynamic Pricing Optimization for E-commerce",
+        "year": 2023,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ipsa voluptatum amet et illum assumenda nam quae fugit cumque at blanditiis dignissimos minus suscipit earum temporibus, odit commodi porro nisi? Exercitationem aperiam iure error ea dolor eaque nam eum?"
+        "description": "Designed a machine learning model that dynamically adjusts product prices based on competitor pricing, demand trends, and seasonality."
     },
     {
-        "title": "Sapiente molestiae nemo non?",
+        "title": "HealthTrack: Predicting Hospital Readmission Rates",
+        "year": 2022,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Inventore laboriosam saepe incidunt harum, odio ratione blanditiis, error molestiae at quasi voluptate. Voluptate delectus repellat ad, aut, dolorem distinctio, recusandae ratione corporis eveniet maiores doloribus quo alias facilis numquam."
+        "description": "Developed a classification model to predict the likelihood of patient readmission within 30 days using electronic health records and socio-economic data."
     },
     {
-        "title": "Dicta ipsum veniam minus?",
+        "title": "GreenRide: EV Charging Station Demand Forecasting",
+        "year": 2021,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Magnam sapiente eveniet sint doloribus laborum facere voluptas consequuntur dolorum repellat fuga molestiae illum nisi molestias distinctio, aliquid tempore laudantium sunt similique tempora amet recusandae maxime blanditiis deleniti! Nesciunt, doloribus!"
+        "description": "Used time-series analysis to predict demand for electric vehicle (EV) charging stations based on weather conditions, traffic density, and location-specific usage data."
     }
 ]
