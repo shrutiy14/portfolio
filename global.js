@@ -113,16 +113,35 @@ export function renderProjects(projects, containerElement, headingLevel ='h2') {
       // Create a new <article> element to hold the project's details
       const article = document.createElement('article');
 
-      // Create the dynamic heading element based on headingLevel
+      // Create the heading element dynamically
       const heading = document.createElement(headingLevel);
       heading.textContent = project.title;
 
-      // Populate the article with dynamic content
-      article.innerHTML = `
-          ${heading.outerHTML}  <!-- Add the dynamic heading -->
-          <img src="${project.image}" alt="${project.title}">
-          <p>${project.description}</p>
-      `;
+      // Create a span for the project year
+      const yearSpan = document.createElement('span');
+      yearSpan.textContent = ` (${project.year})`;
+      yearSpan.style.fontWeight = 'bold';
+      yearSpan.style.marginLeft = '8px';
+      yearSpan.style.color = '#555';
+
+      // Wrap heading and year together in a div
+      const headingContainer = document.createElement('div');
+      headingContainer.appendChild(heading);
+      headingContainer.appendChild(yearSpan);
+
+      // Create an image element
+      const img = document.createElement('img');
+      img.src = project.image;
+      img.alt = project.title;
+
+      // Create a paragraph for the description
+      const description = document.createElement('p');
+      description.textContent = project.description;
+
+      // Append all elements to the article
+      article.appendChild(headingContainer);
+      article.appendChild(img);
+      article.appendChild(description);
 
       // Append the article to the container element
       containerElement.appendChild(article);

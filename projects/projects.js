@@ -1,3 +1,4 @@
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
@@ -5,23 +6,14 @@ renderProjects(projects, projectsContainer, 'h2');
 const projectsTitle = document.querySelector('.projects-title');
 projectsTitle.textContent = `Projects Count: ${projects.length}`;
 
-/*import { fetchJSON, renderProjects } from '../global.js';
+// Ensure the script runs after the DOM is loaded
 
-async function loadProjects() {
-    try {
-        // Fetch the project data from the JSON file
-        const projects = await fetchJSON('../lib/projects.json');
+// Define the arc generator
+let arc = d3.arc().innerRadius(0).outerRadius(50)({
+    startAngle: 0,
+    endAngle: 2 * Math.PI
+});
 
-        // Select the container element where the projects will be displayed
-        const projectsContainer = document.querySelector('.projects');
+d3.select('#projects-plot').append('path').attr('d', arc).attr('fill', 'red');
 
-        // Render the fetched projects
-        renderProjects(projects, projectsContainer, 'h2');
-    } catch (error) {
-        console.error('Error loading projects:', error);
-    }
-}
 
-// Call the loadProjects function to fetch and render the projects
-loadProjects();
-*/

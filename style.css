@@ -246,6 +246,19 @@ time {
     text-decoration: underline;
 }
 
+/*#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+  }*/
+  
+#projects-plot {
+    max-width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+    background: lightgray; /* Background to check visibility */
+}
 
 
 
