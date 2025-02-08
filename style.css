@@ -246,14 +246,29 @@ time {
     text-decoration: underline;
 }
 
-/* Style the <ul> to create a grid layout */
-.legend {
+/* Container for the pie chart and legend */
+.container {
+    display: flex; /* Layout the pie chart and legend side by side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2em; /* Space between pie chart and legend */
+    margin: 2em 0; /* Add margin to the container for spacing */
+  }
+  
+  /* SVG (pie chart) styling */
+  svg {
+    width: 200px; /* Set the width of the pie chart */
+    height: 200px; /* Set the height of the pie chart */
+  }
+  
+  /* Legend styling */
+  .legend {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); /* Auto-fill grid with a minimum size of 9em per item */
     gap: 1em; /* Space between legend items */
     padding: 1em; /* Padding inside the legend */
     border: 1px solid #ddd; /* Border around the legend */
     margin-top: 1em; /* Space between the pie chart and the legend */
+    flex: 1; /* Let the legend occupy the remaining width */
   }
   
   /* Style each <li> in the legend */
@@ -272,27 +287,40 @@ time {
     background-color: var(--color); /* Use the color set via D3 */
     border-radius: 50%; /* Make the swatch a circle */
   }
-  
-  /* Add some basic styles for the text (optional) */
-  .legend-item em {
-    font-style: normal;
-    color: #555; /* Slightly darker color for the value */
-  }
-  
 
-/*
-#projects-pie-plot {
-    max-width: 20em;
-    margin-block: 2em;
-    overflow: visible;
+  /* Add transition for smooth opacity change */
+path {
+    transition: opacity 300ms;  /* Smooth transition for opacity */
   }
-/*
-#projects-plot {
-    max-width: 200px;
-    height: 200px;
-    margin: 20px auto;
-    display: block;
-    background: lightgray; }*/
+  
+/* Apply hover effect: when a path is hovered, fade other paths */
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;  /* Fade all other paths */
+}
+  
+/* Apply transition for smooth hover effect */
+path {
+    transition: opacity 300ms;
+    cursor: pointer;  /* Indicate that the wedge is clickable */
+  }
+  
+ /*
+  .selected {
+    --color: oklch(60% 45% 0) !important;  /* A distinct color for selected wedge */
+ /* }*/
+  .selected {
+    fill: hotpink !important;  /* Apply hot pink color to the selected wedge */
+  }
+  
+  
+  /* Apply the selected style to the legend item */
+  .legend-item.selected {
+    font-weight: bold;  /* Make the selected legend item bold */
+    color: var(--color);  /* Match the color of the selected wedge */
+ }
+
+
+  
 
 
 
