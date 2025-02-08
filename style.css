@@ -246,6 +246,39 @@ time {
     text-decoration: underline;
 }
 
+/* Style the <ul> to create a grid layout */
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); /* Auto-fill grid with a minimum size of 9em per item */
+    gap: 1em; /* Space between legend items */
+    padding: 1em; /* Padding inside the legend */
+    border: 1px solid #ddd; /* Border around the legend */
+    margin-top: 1em; /* Space between the pie chart and the legend */
+  }
+  
+  /* Style each <li> in the legend */
+  .legend-item {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    gap: 0.5em; /* Space between the swatch and the text */
+    padding: 0.5em; /* Padding inside each legend item */
+  }
+  
+  /* Style the swatch (the colored circle) */
+  .legend .swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color); /* Use the color set via D3 */
+    border-radius: 50%; /* Make the swatch a circle */
+  }
+  
+  /* Add some basic styles for the text (optional) */
+  .legend-item em {
+    font-style: normal;
+    color: #555; /* Slightly darker color for the value */
+  }
+  
 
 /*
 #projects-pie-plot {
