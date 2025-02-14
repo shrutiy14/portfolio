@@ -4,16 +4,7 @@ body {
     margin-inline: auto;  
     padding: 0 1rem; 
   }
-  
-/*nav ul {
-    display: contents;  
-  }
-  
-nav li {
-    display: contents;  
-  }*/
 
- 
 :root {
     /*--color-accent: oklch(65% 60% 0); */
     /*color-scheme: light dark;*/
@@ -318,9 +309,66 @@ path {
     font-weight: bold;  /* Make the selected legend item bold */
     color: var(--color);  /* Match the color of the selected wedge */
  }
+/* Overall stats container */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 columns for the stats */
+    gap: 30px; /* Add spacing between stats */
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Add a max-width for better alignment */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Label for the stats (e.g., "COMMITS") */
+  .stats dt {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Value of the stat (e.g., "59") */
+  .stats dd {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin: 0;
+  }
+  
+  /* Title for the section */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Additional optional style to add some spacing and visual distinction between the stats */
+  .stats abbr {
+    text-decoration: underline dotted;
+  }
+  
+  /* Add hover effect to make the stat labels interactive */
+  .stats dt:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
 
 
   
+
+
+
+
 
 
 
