@@ -17,6 +17,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
+    { url: 'meta/', title: 'Meta' },
     { url: 'https://github.com/shrutiy14', title: 'GitHub' },
   ];
 
@@ -70,6 +71,9 @@ document.body.insertAdjacentHTML(
       </select>
     </label>
   `);
+
+
+
 
 const select = document.querySelector('.color-scheme select');
 function setColorScheme(colorScheme) {
