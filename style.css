@@ -361,8 +361,31 @@ path {
     color: #007bff;
     cursor: pointer;
   }
-  
 
+  #chart {
+    width: 100%; /* Allow it to stretch to available space */
+    max-width: 1000px; /* Match the width in JS */
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+  border: 1px solid red;
+}
+
+
+  /*
+  #chart {
+    min-width: 1000px;
+    min-height: 700px;
+}*/
+/*
+  svg {
+    display: block; /* Ensures no extra space around the SVG */
+   /* margin: 0 auto; /* Centers the SVG within its container */
+  /*}*/
+  
 
   
 

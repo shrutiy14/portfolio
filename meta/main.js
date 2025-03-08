@@ -1,101 +1,133 @@
 let data = [];
 let commits = []; // Declare commits as a global variable
 
-// Function to process commit data
+
 function processCommits() {
   commits = d3
     .groups(data, (d) => d.commit) // Group data by commit ID
     .map(([commit, lines]) => {
-      let first = lines[0]; // Get the first line in the commit to access shared properties
+      let first = lines[0]; // Get first line in commit to access shared properties
       let { author, date, time, timezone, datetime } = first;
 
-      // Create an object to store the commit data
+      // Ensure datetime is a valid Date object
+      let commitDate = new Date(datetime);
+
       let ret = {
         id: commit, // Commit ID
-        url: 'https://github.com/YOUR_REPO/commit/' + commit, // URL for the commit on GitHub
+        url: `https://github.com/YOUR_REPO/commit/${commit}`, // GitHub commit URL
         author, // Commit author
         date, // Commit date
         time, // Commit time
-        timezone, // Timezone of the commit
-        datetime, // Full datetime of the commit
-        hourFrac: datetime.getHours() + datetime.getMinutes() / 60, // Fractional hour of the commit
-        totalLines: lines.length, // Total number of lines modified by this commit
+        timezone, // Timezone
+        datetime: commitDate, // Store as Date object
+        hourFrac: commitDate.getHours() + commitDate.getMinutes() / 60, // Fractional hour of the commit
+        totalLines: lines.length, // Total number of lines modified
       };
 
-      // Define the original lines as a hidden property
+      // Hide the `lines` array from console output while keeping access
       Object.defineProperty(ret, 'lines', {
-        value: lines, // The lines modified in this commit
-        writable: false, // Make it read-only
-        enumerable: false, // Don't display in console or object iteration
-        configurable: false, // Don't allow changes to this property
+        value: lines,
+        writable: false, // Prevent modification
+        configurable: false, // Prevent deletion
+        enumerable: false, // Hide from console.log()
       });
 
-      return ret; // Return the processed commit object
+      return ret;
     });
 }
 
+
 function displayStats() {
-    // Process commits first
-    processCommits();
-  
-    // Create the dl element
-    const dl = d3.select('#stats').append('dl').attr('class', 'stats');
-  
-    // Add total LOC (lines of code)
-    const totalLOC = d3.sum(data, (d) => d.length); // Summing the line lengths across all data
-    dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
-    dl.append('dd').text(totalLOC);
-  
-    // Add total commits
-    dl.append('dt').text('Total commits');
-    dl.append('dd').text(commits.length);
-  
-    // ADD AGGREGATES OVER THE WHOLE DATASET
+  // Process commits first
+  processCommits();
 
-    // Average line length
-    const avgLineLength = d3.mean(data, (d) => d.length);
-    dl.append('dt').text('Average line length');
-    dl.append('dd').text(avgLineLength.toFixed(2));
+  // Create the dl element
+  const dl = d3.select('#stats').append('dl').attr('class', 'stats');
 
-    // Longest line length
-    const longestLine = d3.max(data, (d) => d.length);
-    dl.append('dt').text('Longest line length');
-    dl.append('dd').text(longestLine);
+  // Add total LOC
+  dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+  dl.append('dd').text(data.length);
 
-    // Maximum depth
-    const maxDepth = d3.max(data, (d) => d.depth);
-    dl.append('dt').text('Maximum depth');
-    dl.append('dd').text(maxDepth);
+  // Add total commits
+  dl.append('dt').text('Total commits');
+  dl.append('dd').text(commits.length);
 
-    // Average depth
-    const avgDepth = d3.mean(data, (d) => d.depth);
-    dl.append('dt').text('Average depth');
-    dl.append('dd').text(avgDepth.toFixed(2));
+  // Add more stats as needed...
 
-    // ADD NUMBER OF DISTINCT VALUES
-    dl.append('dt').text('Number of files');
-    dl.append('dd').text(d3.group(data, (d) => d.file).size);
+  // Calculate number of files in the codebase
+  const numFiles = d3.groups(data, (d) => d.file).length;
+  dl.append('dt').text('Number of files');
+  dl.append('dd').text(numFiles);
 
-    // Add the Longest file (max lines)
-    const maxFileLength = d3.max(data, (d) => d.line);
-    dl.append('dt').text('Longest file (max lines)');
-    dl.append('dd').text(maxFileLength);
+  // Calculate maximum file length (in lines)
+  const maxFileLength = d3.max(d3.rollups(data, (v) => v.length, (d) => d.file), (d) => d[1]);
+  dl.append('dt').text('Maximum file length (lines)');
+  dl.append('dd').text(maxFileLength);
 
-    // Average file length (in lines)
-    const fileLengths = d3.rollups(
-        data,
-        (v) => d3.max(v, (d) => d.line),
-        (d) => d.file
-    );
-    const avgFileLength = d3.mean(fileLengths, (d) => d[1]);
-    dl.append('dt').text('Average file length (in lines)');
-    dl.append('dd').text(Math.round(avgFileLength));
+  // Calculate average file length (in lines)
+  const avgFileLength = d3.mean(d3.rollups(data, (v) => v.length, (d) => d.file), (d) => d[1]);
+  dl.append('dt').text('Average file length (lines)');
+  dl.append('dd').text(avgFileLength.toFixed(2));
 
-    dl.append('dt').text('Most active time of day');
-    dl.append('dd').text(d3.greatest(d3.rollups(data, v => v.length, d => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' })), d => d[1])?.[0]);
+  // Calculate time of day when most work is done
+  const workByPeriod = d3.rollups(
+    data,
+    (v) => v.length,
+    (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' })
+  );
+  const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0];
+
+  dl.append('dt').text('Most work done during');
+  dl.append('dd').text(maxPeriod);
 }
 
-  
+
+function createScatterplot() {
+  const width = 1000;
+  const height = 600;
+  /*
+  const svg = d3
+  .select('#chart')
+  .append('svg')
+  .attr('viewBox', `0 0 ${width} ${height}`)
+  .style('overflow', 'visible');*/
+
+  const svg = d3
+  .select('#chart')
+  .append('svg')
+  .attr('width', width) // Ensure explicit width
+  .attr('height', height) // Ensure explicit height
+  .attr('viewBox', `0 0 ${width} ${height}`)
+  .style('overflow', 'visible');
+
+
+  const xScale = d3
+  .scaleTime()
+  .domain(d3.extent(commits, (d) => d.datetime))
+  .range([0, width])
+  .nice();
+
+  const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+
+  const dots = svg.append('g').attr('class', 'dots');
+
+  dots
+  .selectAll('circle')
+  .data(commits)
+  .join('circle')
+  .attr('cx', (d) => xScale(d.datetime))
+  .attr('cy', (d) => yScale(d.hourFrac))
+  .attr('r', 5)
+  .attr('fill', 'steelblue');
+
+}
+
+
+
+// Trigger the data loading and processing when the document is ready
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadData();
+});
 
 // Function to load and process data
 async function loadData() {
@@ -108,15 +140,7 @@ async function loadData() {
     datetime: new Date(row.datetime),
   }));
 
-  // After loading and processing data, run processCommits to compute commit data
-  //processCommits();
-  displayStats();  // Call displayStats to show the stats
-  
-  // For testing, print out the commits array to the console
-  //console.log(commits);
+  console.log(commits);
+  displayStats();  // Display the stats
+  createScatterplot(); // Create the scatterplot
 }
-
-// Trigger the data loading and processing when the document is ready
-document.addEventListener('DOMContentLoaded', async () => {
-  await loadData();
-});
