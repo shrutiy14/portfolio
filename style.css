@@ -246,7 +246,7 @@ time {
   }
   
   /* SVG (pie chart) styling */
-  svg {
+  .projects svg {
     width: 200px; /* Set the width of the pie chart */
     height: 200px; /* Set the height of the pie chart */
   }
@@ -363,15 +363,12 @@ path {
   }
 
   #chart {
-    width: 100%; /* Allow it to stretch to available space */
+    width: 1000px; /* Allow it to stretch to available space */
     max-width: 1000px; /* Match the width in JS */
-    height: auto;
+    height: 600px;
     display: flex;
     justify-content: center;
-}
-
-svg {
-  border: 1px solid red;
+    align-items: center;
 }
 
 
@@ -385,7 +382,89 @@ svg {
     display: block; /* Ensures no extra space around the SVG */
    /* margin: 0 auto; /* Centers the SVG within its container */
   /*}*/
-  
+
+  .gridlines line {
+    stroke: lightgray; /* Light gray color for subtle visibility */
+    stroke-opacity: 0.5; /* Reduce opacity to make it less dominant */
+    shape-rendering: crispEdges; /* Ensures sharp, clean lines */
+}
+
+.gridlines path {
+    stroke: none; /* Remove the main axis line */
+}
+/*
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  display: block;
+}*/
+
+.tooltip {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; /* First column for labels, second for values */
+  gap: 0.5em 1em; /* Space between rows and columns */
+  padding: 0.5em;
+  font-size: 0.9rem;
+}
+
+dl.info dt {
+  font-weight: bold;
+  color: #666; /* Labels less prominent */
+  text-align: right;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: normal;
+  color: #333; /* Values more prominent */
+}
+
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+
+
+
 
   
 

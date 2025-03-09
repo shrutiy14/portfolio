@@ -6,7 +6,6 @@
     <title>Meta</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-
 </head>
 <body>
     <nav>
@@ -15,8 +14,41 @@
     <p>This page includes stats about the code of this website!</p>
     <h2>Summary Statistics</h2>
     <div id="stats"></div>
+
+    <dl id="commit-tooltip" class="info tooltip">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+      
+        <!-- Add: Time, author, lines edited -->
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+      
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+      
+        <dt>Lines Edited</dt>
+        <dd id="commit-lines"></dd>
+
+    </dl>
+    
+    <div id="filter-ui">
+        <label for="commit-slider">Show commits until:</label>
+        <input type="range" id="commit-slider" min="0" max="100" value="100">
+        <time id="selectedTime"></time>
+    </div>
+    
+
+
     <h3>Commits by time of day</h3>
-    <div id="chart"></div>
+    <div id="chart">        
+    </div>
+    <p id="selection-count"></p>
+    <dl id="language-breakdown" class="stats"></dl>
     <script src="../global.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
